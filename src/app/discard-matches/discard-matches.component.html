@@ -2,30 +2,43 @@
     <h1>Find Mismatched UUID's</h1>
     <form (ngSubmit)="onSubmit()">
       <div class="flex-container">
-        <div class="stack">
-            <label for="rise">RISE UUIDS:</label>
-
-            <textarea id="rise" [(ngModel)]="rise" name="rise"></textarea>
-       </div>
-
-        <div class="stack">
-            <label for="ip">IP UUIDS:</label>
-
-            <textarea id="ip" [(ngModel)]="ip" name="ip"></textarea>
+        <div>
+          <label for="rise">RISE UUIDS:</label>
+          <textarea id="rise" [(ngModel)]="rise" name="rise"></textarea>
+        </div>
+  
+        <div>
+          <label for="ip">IP UUIDS:</label>
+          <textarea id="ip" [(ngModel)]="ip" name="ip"></textarea>
         </div>
       </div>
-      <button class="button button1" type="submit">Submit</button>
+      <div class="center">
+        <button class="button button1" type="submit">Submit</button>
+      </div>
     </form>
   
-    <div *ngIf="unmatchedRise">
-      <h2>Unmatched RISE values:</h2>
-      <pre>{{ unmatchedRise }}</pre>
-      <button class="button button1" (click)="copyToClipboard(unmatchedRise)">Copy Unmatched RISE</button>
-    </div>
-  
-    <div *ngIf="unmatchedIp">
-      <h2>Unmatched IP values:</h2>
-      <pre>{{ unmatchedIp }}</pre>
-      <button class="button button1" (click)="copyToClipboard(unmatchedIp)">Copy Unmatched IP</button>
+    <div class="flex-container" *ngIf="unmatchedRise">
+        <div *ngIf="unmatchedRise">
+            <div>
+                <h2>Unmatched RISE UUIDS:</h2>
+                <pre>{{ unmatchedRise }}</pre>
+            </div>
+        <div class="center1">
+            <button class="button button1" (click)="copyToClipboard(unmatchedRise)">Copy Unmatched RISE</button>
+        </div>
+        </div>
+    
+        <div *ngIf="unmatchedIp">
+            <div>
+                <h2>Unmatched IP UUIDS:</h2>
+                <pre>{{ unmatchedIp }}</pre>
+            </div>
+        <div class="center1">
+            <button class="button button1" (click)="copyToClipboard(unmatchedIp)">Copy Unmatched IP</button>
+        </div>
+       </div>
+  </div>
+    <div class="center" *ngIf="unmatchedRise">
+      <button class="excel" (click)="exportToExcel()">Export to Excel</button>
     </div>
   </div>
