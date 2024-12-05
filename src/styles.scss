@@ -3,33 +3,60 @@
 
 h1 {
   color: white;
-  background-color: rgb(37, 113, 189);
+  background-color:#004a7c;
   text-align: center;
 }
 
+h2 {
+    font-size: 30px;
+    display: block;
+    max-width: 100%;
+    color: #004a7c;
+  }
+
 .button {
     border: none;
-    padding: 16px 50%;
+    padding: 16px 32px;
     text-align: center;
     text-decoration: none;
     display: flex ;
     font-size: 16px;
     transition-duration: 0.4s;
     cursor: pointer;
-    width: 50%;
-    position: relative;
+    position: absolute;
   }
 
   .button1 {
-    background-color: rgb(37, 113, 189); 
-    color: rgb(255, 255, 255); 
-    border: 0px solid #008CBA;
+    background-color: #f38a00; 
+    color: white; 
   }
   
   .button1:hover {
-    background-color: #008CBA;
+    background-color: #d87b02;
     color: white;
     
+  }
+
+  .excel {
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex ;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  .excel {
+    background-color: #21a366; 
+    color: white; 
+  }
+  
+  .excel:hover {
+    background-color: #107c41;
+    color: white;  
   }
 
   .flex-container {
@@ -50,6 +77,7 @@ h1 {
     font-size: 30px;
     display: block;
     max-width: 100%;
+    color: #004a7c;
   }
 
   textarea {
@@ -57,8 +85,32 @@ h1 {
     width: 350px;
     height: 250px;
     font-size: 15px;
+    border: #004a7c 2px solid;
   }
 
-  .stack {
-    padding-left: 60px;
+  pre {
+    overflow: auto;
+    width: 350px;
+    height: 250px;
+    font-size: 15px;
+    border: #004a7c 2px solid;
   }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+
+  .center1 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+
+  .unmatched {
+    padding: 10px;
+  }
+
