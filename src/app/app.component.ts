@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { DiscardMatchesComponent } from './discard-matches/discard-matches.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [DiscardMatchesComponent],
+  template: '<app-discard-matches></app-discard-matches>'
+  
 })
-export class AppComponent {
-  title = 'discard-matches-ui';
-}
+export class AppComponent {}

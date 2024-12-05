@@ -1,0 +1,31 @@
+<div>
+    <h1>Find Mismatched UUID's</h1>
+    <form (ngSubmit)="onSubmit()">
+      <div class="flex-container">
+        <div class="stack">
+            <label for="rise">RISE UUIDS:</label>
+
+            <textarea id="rise" [(ngModel)]="rise" name="rise"></textarea>
+       </div>
+
+        <div class="stack">
+            <label for="ip">IP UUIDS:</label>
+
+            <textarea id="ip" [(ngModel)]="ip" name="ip"></textarea>
+        </div>
+      </div>
+      <button class="button button1" type="submit">Submit</button>
+    </form>
+  
+    <div *ngIf="unmatchedRise">
+      <h2>Unmatched RISE values:</h2>
+      <pre>{{ unmatchedRise }}</pre>
+      <button class="button button1" (click)="copyToClipboard(unmatchedRise)">Copy Unmatched RISE</button>
+    </div>
+  
+    <div *ngIf="unmatchedIp">
+      <h2>Unmatched IP values:</h2>
+      <pre>{{ unmatchedIp }}</pre>
+      <button class="button button1" (click)="copyToClipboard(unmatchedIp)">Copy Unmatched IP</button>
+    </div>
+  </div>

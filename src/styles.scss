@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+h1 {
+  color: white;
+  background-color: rgb(37, 113, 189);
+  text-align: center;
+}
+
+.button {
+    border: none;
+    padding: 16px 50%;
+    text-align: center;
+    text-decoration: none;
+    display: flex ;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 50%;
+    position: relative;
+  }
+
+  .button1 {
+    background-color: rgb(37, 113, 189); 
+    color: rgb(255, 255, 255); 
+    border: 0px solid #008CBA;
+  }
+  
+  .button1:hover {
+    background-color: #008CBA;
+    color: white;
+    
+  }
+
+  .flex-container {
+    background-color: DodgerBlue;
+    max-width: 100%;
+    background-color: #f1f1f1;
+    display: flex;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  .flex-container > div {
+    display: block;
+    width: 100%;
+  }
+
+  label {
+    font-size: 30px;
+    display: block;
+    max-width: 100%;
+  }
+
+  textarea {
+    overflow: auto;
+    width: 350px;
+    height: 250px;
+    font-size: 15px;
+  }
+
+  .stack {
+    padding-left: 60px;
+  }
