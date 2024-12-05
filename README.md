@@ -25,3 +25,28 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Run On Windows (non dev)
+To launch this on Windows use the folloing steps
+Create a .bat file with the name start-compare.bat on your desktop with the content bellow:
+
+@echo off
+REM Navigate to the project directory
+cd /d "C:\path\to\your\project"
+
+REM Install dependencies
+npm install
+
+REM Start the Angular application
+start "" "C:\path\to\your\project\node_modules\.bin\ng.cmd" serve
+
+REM Open the application in Chrome
+start chrome http://localhost:4200
+
+
+
+
+Notes:
+Make sure to replace C:\path\to\your\project with the actual path to your Angular project directory.
+Recoment moving the file to a better location than dowloads. 
+
