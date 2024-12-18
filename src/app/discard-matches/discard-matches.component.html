@@ -17,7 +17,7 @@
       </div>
     </form>
   
-    <div class="flex-container" *ngIf="unmatchedRise">
+    <div class="flex-container" *ngIf="unmatchedRise || unmatchedIp">
         <div *ngIf="unmatchedRise">
             <div>
                 <h2>Unmatched RISE UUIDS:</h2>
@@ -29,16 +29,18 @@
         </div>
     
         <div *ngIf="unmatchedIp">
-            <div>
-                <h2>Unmatched IP UUIDS:</h2>
-                <pre>{{ unmatchedIp }}</pre>
-            </div>
+
+          <div>
+            <h2>Unmatched IP UUIDS:</h2>
+              <pre>{{ unmatchedIp }}</pre>
+          </div>
+
         <div class="center1">
-            <button class="button button1" (click)="copyToClipboard(unmatchedIp)">Copy Unmatched IP</button>
+          <button class="button button1" (click)="copyToClipboard(unmatchedIp)">Copy Unmatched IP</button>
         </div>
        </div>
-  </div>
-    <div class="center" *ngIf="unmatchedRise">
+    </div>
+    <div class="center" *ngIf="unmatchedRise || unmatchedIp">
       <button class="excel" (click)="exportToExcel()">Export to Excel</button>
     </div>
-  </div>
+</div>
